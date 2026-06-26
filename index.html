@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="gVj9b1CRacpSjZSCGltgyoiY0kJA8OmbZR6HL7Zp6rE" />
+    <title>X MET | منصة الأفلام العالمية والأنمي</title>
+    <meta name="description" content="موقع X MET لمشاهدة وتحميل أحدث أفلام الأكشن، الأنمي، الأفلام الهندية، الأجنبية والصينية بجودة عالية وبث سريع.">
+    <meta name="keywords" content="X MET, افلام اكشن, انمي, افلام هندي, افلام اجنبي, افلام صيني, تحميل افلام">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* إضافة تنسيق سريع لأزرار التصنيفات */
+        .categories-nav { display: flex; justify-content: center; gap: 10px; margin: 20px auto; flex-wrap: wrap; max-width: 800px; }
+        .cat-btn { background: #161824; color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .cat-btn.active, .cat-btn:hover { background: #00ffcc; color: #000; box-shadow: 0 0 10px rgba(0,255,204,0.5); }
+        .cinema-actions { display: flex; justify-content: space-between; align-items: center; background: #161824; padding: 10px; border-radius: 8px 8px 0 0; }
+        .download-btn { background: #00ffcc; color: #000; padding: 5px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">X <span>MET</span></div>
+        <div class="search-bar">
+            <input type="text" id="searchBox" placeholder="ابحث عن فيلم، أنمي، هندي، صيني...">
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>X MET MULTIVERSE</h1>
+            <p>بوابتك لمشاهدة وتحميل أحدث الأفلام العالمية، المسلسلات، والأنمي المترجم مجاناً وبأقوى السيرفرات.</p>
+        </div>
+    </div>
+
+    <div class="categories-nav">
+        <button class="cat-btn active" onclick="changeCategory('action', 'أحدث أفلام الأكشن والإثارة')">أكشن</button>
+        <button class="cat-btn" onclick="changeCategory('anime', 'أحدث مسلسلات وأفلام الأنمي')">أنمي</button>
+        <button class="cat-btn" onclick="changeCategory('bollywood', 'أحدث الأفلام الهندية')">سينما هندية</button>
+        <button class="cat-btn" onclick="changeCategory('hollywood', 'أحدث الأفلام الأجنبية والعالمية')">أفلام أجنبية</button>
+        <button class="cat-btn" onclick="changeCategory('chinese', 'أحدث الأفلام الآسيوية والصينية')">سينما صينية</button>
+    </div>
+
+    <main class="container">
+        <h2 class="main-title" id="pageTitle">أحدث أفلام الأكشن والإثارة 2026</h2>
+        <div class="movies-grid" id="moviesGrid"></div>
+    </main>
+
+    <div class="cinema-overlay" id="playerModal">
+        <div class="cinema-box">
+            <div class="cinema-actions">
+                <a href="#" id="downloadBtn" target="_blank" class="download-btn">📥 تحميل الفيلم</a>
+                <span class="close-cinema" id="closeBtn" style="margin:0; cursor:pointer;">&times; إغلاق</span>
+            </div>
+            <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
